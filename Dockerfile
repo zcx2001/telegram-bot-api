@@ -41,7 +41,7 @@ RUN if [ "${RUNNER}" != "github" ]; then \
     fi \   
     && apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y libc++-dev locales tzdata dumb-init \
+    && apt-get install -y ca-certificates libc++-dev locales tzdata dumb-init \
     && locale-gen en_US.UTF-8  \
     && rm -rf /var/lib/apt/lists/*
 
